@@ -9,6 +9,7 @@ import collections
 i = 0
 while i < 60:
 	i = i+1
+	print(i)
 	time.sleep(60)
 	r = requests.get('http://www.citibikenyc.com/stations/json')
 	df = json_normalize(r.json()['stationBeanList'])
