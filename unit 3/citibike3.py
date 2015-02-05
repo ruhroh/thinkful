@@ -35,3 +35,4 @@ cur.execute("SELECT id, stationname, latitude, longitude FROM citibike_reference
 data = cur.fetchone() # retrieves data after executing SELECT
 print "The most active station is station id %s at %s latitude: %s longitude: %s " % data
 print "With " + str(bikes) + " bicycles coming and going in the hour between " + datetime.datetime.fromtimestamp(int(df.index[0])).strftime('%Y-%m-%dT%H:%M:%S') + " and " + datetime.datetime.fromtimestamp(int(df.index[-1])).strftime('%Y-%m-%dT%H:%M:%S')
+print "With " + str(hour_change[379]) + " bicycles coming and going in the hour between " + datetime.datetime.fromtimestamp(int(df.index[0])).strftime('%Y-%m-%dT%H:%M:%S') + " and " + datetime.datetime.fromtimestamp(int(df.index[-1])).strftime('%Y-%m-%dT%H:%M:%S')
